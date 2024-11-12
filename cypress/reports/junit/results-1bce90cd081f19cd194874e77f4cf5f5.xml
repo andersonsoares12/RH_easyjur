@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="64.632" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-11-12T06:55:56" tests="0" file="cypress/e2e/JurisAI/modulo_jurisAI.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="teste funcional do modulo JurisAi" timestamp="2024-11-12T06:55:56" tests="1" time="64.627" failures="0">
-    <testcase name="teste funcional do modulo JurisAi Deve Iniciar uma nova consulta ao chat via search" time="63.578" classname="Deve Iniciar uma nova consulta ao chat via search">
-    </testcase>
-  </testsuite>
-</testsuites>

@@ -54,6 +54,37 @@ describe('teste funcional de login', () => {
         });
 
 
-  
+        it('Deve realizar o a recuperação de senha email invalido ou campo vazio', () => {
+            cy.visit("https://app.easyjur.com")
+            cy.get('.easy_logo').should('be.visible')
+            cy.get('.text-primary').click()
+            cy.url().should('equal', 'https://app.easyjur.com/acesso/recuperar_senha.php')
+            cy.get('#email_recuperacao').type(" ")
+            cy.get('#login_submit').click()
+            cy.wait(4000)
+            cy.get('.jconfirm-box').should('be.visible').screenshot('email invalido')
+        });
+
+        it('Deve realizar o a recuperação de senha email invalido ou campo vazio', () => {
+            cy.visit("https://app.easyjur.com")
+            cy.get('.easy_logo').should('be.visible')
+            cy.get('.text-primary').click()
+            cy.url().should('equal', 'https://app.easyjur.com/acesso/recuperar_senha.php')
+            cy.get('#email_recuperacao').type("vaga.qa.teste.pratico@easyju.co")
+            cy.get('#login_submit').click()
+            cy.wait(4000)
+            cy.get('.jconfirm-box').should('be.visible').screenshot('email não encontrado')
+        });
+        
+        it('Deve realizar o a recuperação de senha email Sucesso', () => {
+            cy.visit("https://app.easyjur.com")
+            cy.get('.easy_logo').should('be.visible')
+            cy.get('.text-primary').click()
+            cy.url().should('equal', 'https://app.easyjur.com/acesso/recuperar_senha.php')
+            cy.get('#email_recuperacao').type("vaga.qa.teste.pratico@easyjur.com")
+            cy.get('#login_submit').click()
+            cy.wait(4000)
+            cy.get('.jconfirm-box').should('be.visible').screenshot('Confirmamação de email enviado')
+        });
 
 })

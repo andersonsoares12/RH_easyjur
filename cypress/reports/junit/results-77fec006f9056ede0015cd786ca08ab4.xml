@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.859" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-11-12T06:57:02" tests="0" file="cypress/e2e/login/login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="teste funcional de login" timestamp="2024-11-12T06:57:02" tests="4" time="10.856" failures="0">
+    <testcase name="teste funcional de login Deve realizar o Login com Sucesso" time="5.354" classname="Deve realizar o Login com Sucesso">
+    </testcase>
+    <testcase name="teste funcional de login Deve realizar o Login Incorreto" time="1.552" classname="Deve realizar o Login Incorreto">
+    </testcase>
+    <testcase name="teste funcional de login Deve realizar o Login com Email inválido" time="1.409" classname="Deve realizar o Login com Email inválido">
+    </testcase>
+    <testcase name="teste funcional de login Deve realizar o Login com senha inválida" time="1.477" classname="Deve realizar o Login com senha inválida">
+    </testcase>
+  </testsuite>
+</testsuites>

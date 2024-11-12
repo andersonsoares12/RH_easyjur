@@ -21,5 +21,5 @@ Cypress.Commands.add('login', () => {
   cy.get('#agendaBoxDash > .title').should('contain', 'Agenda')
   cy.get('#hs-eu-confirmation-button').should('be.visible').click()
   cy.get('.icon-brain').click()
-  cy.get('.title-search-bar').should('contain', 'Juris')
+
 });

@@ -19,7 +19,14 @@ Cypress.Commands.add('login', () => {
   cy.get('#input-senha_login').type("QA.teste123")
   cy.get('#login_submit').should('be.visible').click()
   cy.get('#agendaBoxDash > .title').should('contain', 'Agenda')
-  cy.get('#hs-eu-confirmation-button').should('be.visible').click()
-  cy.get('.icon-brain').click()
 
+
+});
+
+Cypress.Commands.add('pessoas', () => {
+  cy.visit("https://app.easyjur.com/sgr/index.php?pg=pessoas_lista")
+});
+
+Cypress.Commands.add('agenda', () => {
+  cy.visit("https://app.easyjur.com/sgr/index.php?pg=agenda_calendar")
 });

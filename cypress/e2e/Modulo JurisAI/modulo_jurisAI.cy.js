@@ -51,12 +51,12 @@ describe('teste funcional do modulo JurisAi', () => {
     cy.get('.sidebar-chat').click().screenshot('Edição OK')
   })
  
-  it.only('Deve clicar no botão Novo Chat', () => {
+  it('Deve clicar no botão Novo Chat', () => {
 
     cy.get('#cria_novo_chat').click().screenshot('Novo Chat')
   })
 
-  it.only('Deve clicar no botão sidebar lado direito', () => {
+  it('Deve clicar no botão sidebar lado direito', () => {
 
     cy.get('#btnCloseChatSidebar').click()
   })

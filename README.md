@@ -26,5 +26,9 @@ npx cypress open
 referencia para gerar o relatório: https://github.com/orgs/QA-Mind7
 npm run cy:run:chrome
 
+* CI/CD do github - actions implementado cada vez que for realizado um push vai rodar na pipeline do gihub-actions
+referencia :
+https://github.com/cypress-io/github-action
+
 
 OBS: na paste fixtures tem arquivos para serem utilizados no teste.

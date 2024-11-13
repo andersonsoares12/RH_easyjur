@@ -30,5 +30,5 @@ npm run cy:run:chrome
 referencia :
 https://github.com/cypress-io/github-action
 
-
+permissão concedida repositorio GITHUB para o email : lmartins@easyjur.com 
 OBS: na paste fixtures tem arquivos para serem utilizados no teste.

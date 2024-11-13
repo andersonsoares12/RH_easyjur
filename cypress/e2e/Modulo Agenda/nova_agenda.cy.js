@@ -8,7 +8,6 @@ describe('teste funcional do modulo Pessoas', () => {
         cy.viewport(1440, 900)
         cy.login()
         cy.agenda()
-
     })
 
 

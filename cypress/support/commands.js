@@ -30,3 +30,6 @@ Cypress.Commands.add('pessoas', () => {
 Cypress.Commands.add('agenda', () => {
   cy.visit("https://app.easyjur.com/sgr/index.php?pg=agenda_calendar")
 });
+Cypress.Commands.add('jurisAI', () => {
+  cy.visit(" https://app.easyjur.com/sgr/index.php?pg=chat_juris")
+});

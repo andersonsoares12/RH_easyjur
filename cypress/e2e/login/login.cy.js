@@ -5,7 +5,7 @@ describe('teste funcional de login', () => {
             // executa esses testes como se estivesse em um desktop
             // navegador com monitor 720p
             // para melhor exibição do botão de menu.
-            cy.viewport(1280, 720)
+            cy.viewport(1440, 900)
         });
         it('Deve realizar o Login com Sucesso', () => {
             cy.visit("https://app.easyjur.com")

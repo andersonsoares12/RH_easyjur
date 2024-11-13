@@ -22,5 +22,9 @@ Para abrir o Cypress pela primeira vez e criar os arquivos de configuração pad
 npx cypress open
  
 
-Comando para Gerar o Relatório no cypress: roda o script
+* Comando para Gerar o Relatório no cypress: roda o script
+referencia para gerar o relatório: https://github.com/orgs/QA-Mind7
 npm run cy:run:chrome
+
+
+OBS: na paste fixtures tem arquivos para serem utilizados no teste.

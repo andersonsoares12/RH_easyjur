@@ -7,13 +7,16 @@ describe('teste funcional do modulo JurisAi', () => {
     // executa esses testes como se estivesse em um desktop
     // navegador com monitor 720p
     // para melhor exibição do botão de menu.
-    cy.viewport(1280, 720)
+    cy.viewport(1440, 900)
     cy.login()
+    cy.jurisAI()
   })
 
   // O login será feito no beforeEach
 
   it('Deve Iniciar uma nova consulta ao chat via search', () => {
+    cy.get('#hs-eu-confirmation-button').click();
+    cy.get('#btnCloseChatSidebar').click()
     cy.get('#input_chat_search').type('Poderia fazer para mim Petição Inicial \npara Resc Indenização por Danos Morais e Materiais Decorrentes de Venda Fraudulenta de Veículo')
     cy.get('#sendMessageBtn').click().wait(22000)
     cy.get('#loading-bot-message').wait(30000)
@@ -23,8 +26,10 @@ describe('teste funcional do modulo JurisAi', () => {
   })
 
   it('Deve clicar no ícone Deletar Chat', () => {
-    
-    cy.get('.chat-tab-actions > #thread_3qy3J7ZhJZgbnh6i10OUPIbB').click()
+    cy.get('#hs-eu-confirmation-button').click();
+    cy.get('.chat-tab-actions > #thread_4qqLKY95p9WZgjJIIoLKETnG').click()
+    //sempre inspeconar o elemento para pega thread_NkKMPkJ91PzowPT4L1T5lr1j sempre muda
+    // cy.get('.chat-tab-actions > #thread_NkKMPkJ91PzowPT4L1T5lr1j') proximo para deletar so sibistitir no passo anterior
     cy.get('.jconfirm-box').should('be.visible').screenshot('excluir a conversa')
     cy.get('.jconfirm-buttons > :nth-child(1)').click()
     cy.screenshot('Chat removido com sucesso')
@@ -32,7 +37,10 @@ describe('teste funcional do modulo JurisAi', () => {
   })
   
   it('Deve Anexar arquivo ao chat', () => {
+
     const caminhoDoArquivo = 'fixtures/teste.png';
+    cy.get('#btnCloseChatSidebar').click()
+    cy.get('#hs-eu-confirmation-button').click();
     cy.get('#input_chat_search').click().type('Petição de pensao alimenticia')
     cy.get('#sendMessageBtn').click()
     cy.wait(30000)
@@ -42,23 +50,15 @@ describe('teste funcional do modulo JurisAi', () => {
   
  
   it('Deve clicar no ícone Editar Chat', () => {
-    
-    cy.get('#edit-tab-thread_vy34CTwCNkWM56slSTLhGIpU').click()
-    cy.get('#today-tab > .active')       
+    cy.get('#hs-eu-confirmation-button').click();
+    //não pode esquecer de inspecionar o compenete
+    cy.get('#edit-tab-thread_wHd6XX0FRWB9DTfT6ycUCOHj').click()
+    //não pode esquecer de inspecionar o compenete
+    cy.get('#yesterday-tab > .active')
     .type('{selectAll}')                
     .type('{del}')                      
     .type('Teste QA'); 
     cy.get('.sidebar-chat').click().screenshot('Edição OK')
-  })
- 
-  it('Deve clicar no botão Novo Chat', () => {
-
-    cy.get('#cria_novo_chat').click().screenshot('Novo Chat')
-  })
-
-  it('Deve clicar no botão sidebar lado direito', () => {
-
-    cy.get('#btnCloseChatSidebar').click()
   })
 
 })

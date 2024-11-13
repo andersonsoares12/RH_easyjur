@@ -8,7 +8,7 @@ describe('teste funcional do modulo Pessoas', () => {
         // executa esses testes como se estivesse em um desktop
         // navegador com monitor 720p
         // para melhor exibição do botão de menu.
-        cy.viewport(1280, 720)
+        cy.viewport(1440, 900)
         cy.login()
         cy.pessoas()
 

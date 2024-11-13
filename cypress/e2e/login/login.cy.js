@@ -7,7 +7,7 @@ describe('teste funcional de login', () => {
             // para melhor exibição do botão de menu.
             cy.viewport(1440, 900)
         });
-        it('Deve realizar o Login com Sucesso', () => {
+        it.only('Deve realizar o Login com Sucesso', () => {
             cy.visit("https://app.easyjur.com")
             cy.get('.easy_logo').should('be.visible')
             cy.get('#input-email_login').type("vaga.qa.teste.pratico@easyjur.com")
@@ -16,9 +16,6 @@ describe('teste funcional de login', () => {
             // Verifica se a URL é igual à esperada
             cy.url().should('equal', 'https://app.easyjur.com/sgr/index.php')
             cy.screenshot('Login com sucesso')
-
-
-
         });
 
         it('Deve tentar realizar o Login Incorreto', () => {
